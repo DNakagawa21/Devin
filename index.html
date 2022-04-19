@@ -18,14 +18,24 @@
         button {
             margin: 10px 0px 0px 0px;
             padding: 5px;
-            background-color: rgb(112, 185, 70);
+            background-color:red;
             border: none;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: gray;
+            margin: 10px 200px 10px 200px;
+        }
+
+        #form-text {
+            color: red;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Registration Form</h1>
+        <h1>Registration <span id="form-text">Form</span></h1>
     </header>
     <form action="/process" method="post">
         <div>

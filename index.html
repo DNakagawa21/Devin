@@ -5,7 +5,15 @@
     <style>
         body {
             text-align: center;
-            margin: 100px 0px 0px 0px;
+            margin: 50px 0px 0px 0px;
+        }
+
+        div {
+            margin: 10px 0px 0px 0px;
+        }
+
+        input {
+            padding: 10px;
         }
     </style>
 </head>
@@ -13,78 +21,63 @@
     <header>
         <h1>Registration Form</h1>
     </header>
-<form action="/process" method="post">
-    <div>
-        <label>First Name: </label>
-        <input type="text" name="name" 
-        placeholder="Your name..." >
-    </div>
-
-    <div>
-        <label>Last Name: </label>
-        <input type="text" name="name" 
-        placeholder="Your last name..." >
-    </div>
-
-    <div>
-        <label>Email: </label>
-        <input type="text" name="email" 
-        placeholder="Your email..." >
-    </div>
-
-    <div>
-        <label>Password: </label>
-        <input type="password" name="password" 
-        placeholder="Your password..." >
-    </div>
-
-    <div>
-        <label>Confirm Password: </label>
-        <input type="password" name="password" 
-        placeholder="Your password..." >
-    </div>
-
-    <div>
-        <label>Birthday: </label>
-        <input type="date" name="dob">
-    </div>
-
-    <div>
-        <label>Gender Identity: </label>
-        <input type="radio" name="font" value="male" id="male">
-        <label for="male">Male</label>
-        <input type="radio" name="font" value="female" id="female">
-        <label for="female">Female</label>
-        <input type="radio" name="font" value="non-binary" id="non-binary">
-        <label for="non-binary">Non-binary</label>
-        <input type="radio" name="font" value="i-prefer-not-to-answer" id="i-prefer-not-to-answer">
-        <label for="i-prefer-not-to-answer">I prefer not to answer</label>
-    </div>
-
-    <div>
-        <label>A short description about yourself: </label>
-        <textarea name="comment" cols="20" rows="3"></textarea>
-    </div>
-    
-    <div>
-        <label>Favorite Language</label>
-        <select name="Language">
-            <option>Choose one</option>
-            <option>HTML</option>
-            <option>Javascript</option>
-            <option>CSS</option>
-            <option>Python</option>
-            <option>Other</option>
-        </select>        
-    </div>
-    
-    <div>
-        <input type="checkbox" name="offers" 
-        id="offers" checked >
-        <label for="offers">I would like 
-        to receive email offers!</label>
-    </div>
-    <input type="submit" value="Create Account" >
-</form>
+    <form action="/process" method="post">
+        <div>
+            <label>First Name: </label>
+            <input type="text" name="name" placeholder="Your name..." >
+        </div>
+        <div>
+            <label>Last Name: </label>
+            <input type="text" name="name" placeholder="Your last name..." >
+        </div>
+        <div>
+            <label>Email: </label>
+            <input type="text" name="email" placeholder="Your email..." >
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="password" name="password" placeholder="Your password..." >
+        </div>
+        <div>
+            <label>Confirm Password: </label>
+            <input type="password" name="password" placeholder="Your password..." >
+        </div>
+        <div>
+            <label>Birthday: </label>
+            <input type="date" name="dob" >
+        </div>
+        <div>
+            <label>Gender Identity: </label>
+            <input type="radio" name="font" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="font" value="female" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="font" value="non-binary" id="non-binary">
+            <label for="non-binary">Non-binary</label>
+            <input type="radio" name="font" value="i-prefer-not-to-answer" id="i-prefer-not-to-answer">
+            <label for="i-prefer-not-to-answer">I prefer not to answer</label>
+        </div>
+        <div>
+            <label for="description">A short description about yourself: </label><br/>
+            <textarea name="comment" cols="20" rows="3" id="description"></textarea>
+            
+        </div>
+        <div>
+            <label>Favorite Language</label>
+            <select name="Language">
+                <option value="" selected disabled>- Choose one -</option>
+                <option value="html">HTML</option>
+                <option value="javascript">Javascript</option>
+                <option value="css">CSS</option>
+                <option value="python">Python</option>
+                <option value="other">Other</option>
+            </select>        
+        </div>
+        <div>
+            <input type="checkbox" name="offers" id="offers" checked >
+            <label for="offers">I would like to receive email offers!</label>
+        </div>
+        <button type="submit">Create Account</button>
+    </form>
 </body>
 </html>
